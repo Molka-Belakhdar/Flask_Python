@@ -11,16 +11,7 @@ def exercice(valeur):
         etoiles += '*'
         for i in range(valeur):
             print("*"*valeur)
-    return etoiles #Comm
-
-
-if __name__ == "__main__":
-  app.run(debug=True)
-from flask import Flask
-from flask import render_template
-from flask import json                                                                                                                                     
-app = Flask(__name__)                                                                                                                  
-
+    return etoiles
 
 
 if __name__ == "__main__":
