@@ -11,7 +11,7 @@ def exercice(valeur):
         etoiles += '*'
         for i in range(valeur):
             print("*"*valeur)
-    return etoiles #Comm2
+    return etoiles #Comm
 
 
 if __name__ == "__main__":
