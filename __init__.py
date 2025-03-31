@@ -1,17 +1,13 @@
 from flask import Flask
-from flask import render_template
-from flask import json
 
-app = Flask(name)
+app = Flask(__name__)
 
 @app.route('/<int:valeur>')
 def exercice(valeur):
     etoiles = ''
-    for j in range(1, valeur + 1):
-        for i in range(j):
-            etoiles += '*'
-        etoiles += '<br>'
+    for i in range(1, valeur + 1):
+        etoiles += '*' * i + '<br>'
     return etoiles
 
-if name == "main":
+if __name__ == "__main__":
     app.run(debug=True)
