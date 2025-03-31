@@ -1,16 +1,14 @@
 from flask import Flask
-from flask import render_template
-from flask import json                                                                                                                                     
-app = Flask(__name__)                                                                                                                  
 
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Bienvenue ! Ajoutez un nombre dans l'URL pour voir des étoiles."
 
 @app.route('/<int:valeur>')
 def exercice(valeur):
-    etoiles = ''
-    for i in range(valeur):
-        etoiles += '*'
-    return etoiles #com
-
+    return '*' * valeur  
 
 if __name__ == "__main__":
-  app.run(debug=True)
+    app.run(debug=True)
