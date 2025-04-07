@@ -1,17 +1,16 @@
 from flask import Flask
 
-app = Flask(name)
+app = Flask(__name__)
 
 @app.route('/<path:valeurs>')
 def exercice(valeurs):
     liste_nombres = valeurs.split('/')
-    liste_nombres = [int(n) for n in liste_nombres]
-    max_valeur = liste_nombres[0]
-    for n in liste_nombres:
-        if n > max_valeur:
-            max_valeur = n
+    liste_nombres = [int(nombre) for nombre in liste_nombres]
+    valeur_max = liste_nombres[0]
+    for nombre in liste_nombres:
+        if nombre > valeur_max:
+            valeur_max=nombre
+    return str(valeur_max)
 
-    return str(max_valeur)
-
-if name == 'main':
+if __name__ == '__main__':
     app.run(host='0.0.0.0')
