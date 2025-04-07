@@ -12,8 +12,8 @@ def exercice(valeur):
         a, b = b, a + b
         sequence.append(b)
     
-    fibonacci = '<pre>' + ', '.join(map(str, sequence)) + '</pre>'
-    return fibonacci
+    resultat = '<pre>' + ', '.join(map(str, sequence)) + '</pre>'
+    return resultat
 
 if __name__ == "__main__":
     app.run(debug=True)
