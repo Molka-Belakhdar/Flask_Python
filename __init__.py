@@ -8,10 +8,10 @@ app = Flask(__name__)
 def exercice(valeur):
     a, b = 0, 1
     sequence = [a, b]
-    for  in range(2, valeur):
+    for _ in range(2, valeur):
         a, b = b, a + b
         sequence.append(b)
-
+    
     fibonacci = '<pre>' + ', '.join(map(str, sequence)) + '</pre>'
     return fibonacci
 
